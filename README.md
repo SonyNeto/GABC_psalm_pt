@@ -2,6 +2,9 @@
 Psalm Tone Tool for portuguese language.
 
 # Usage
+* First, create a .txt file with the psalm, separating each versicle with a line break and each hemistich with *. For flexa, use a dagger mark † attached to the last word.
+The psalm.txt file is formatted correctly to be referenced.
+
 * Exporting a PDF named "psalm_tp.pdf" with the Tonus Paschalis:
 ```
 $python main.py -p psalm.txt -t tp -e -f psalm_tp
