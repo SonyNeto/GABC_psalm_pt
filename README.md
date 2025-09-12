@@ -24,5 +24,5 @@ $python main.py -p psalm.txt -t tp -g
 -g, --gabc         Print GABC.
 ```
 # Dependencies:
-* This program uses the algorithm 'ceci' from the project [Pɛtɾʊs (PhonEtic TRanscriber for User Support)](alessandrobokan/PETRUS) to separate the syllables and mark the stressed syllable.
+* This program uses an algorithm from the project [separador-silabas](gigiodelchiaro/separador-silabas) to separate the syllables and mark the stressed syllable.
 * To export a PDF file, LuaTeX is needed and has to be in the system PATH.
