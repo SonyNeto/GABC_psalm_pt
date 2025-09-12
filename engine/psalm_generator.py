@@ -1,6 +1,6 @@
-from PETRUS_master.g2p.g2p import G2PTranscriber
 import re
 from engine.accents_pattern import accent_2
+from engine.separador_silabas import syllabifier
 
 
 # psalm = ('''Quando vos invoco, respondei-me, ó Deus de minha justiça† vós que na hora da angústia me reconfortastes * Tende piedade de mim e ouvi minha oração
@@ -24,7 +24,8 @@ def psalm_generator(psalm, clef, int_1, int_2, ten, flex_1, flex_2, pre_med_1, p
     hemistichs_syllables = []
     for hemistique in hemistichs_words:
         for word in hemistique:
-            word_syllables = G2PTranscriber(word, algorithm="ceci").get_syllables_with_stress_boundaries()
+            #word_syllables = G2PTranscriber(word, algorithm="ceci").get_syllables_with_stress_boundaries()
+            word_syllables = syllabifier(word)
             word_syllables = re.findall(r'.+?-|.+', word_syllables)
             syllables += word_syllables
         hemistichs_syllables.append(syllables)
@@ -54,7 +55,7 @@ def psalm_generator(psalm, clef, int_1, int_2, ten, flex_1, flex_2, pre_med_1, p
             #Flexa
             for syllable in hemistich_with_gabc:
                 if '†' in syllable:
-                    hemistich_with_gabc = accent_2(hemistich_with_gabc[:hemistich_with_gabc.index(syllable) + 1], None, None, None, flex_1, flex_1, flex_2, True, False, 1) + hemistich_with_gabc[hemistich_with_gabc.index(syllable) + 1:] #Flexas só tem 1 acento
+                    hemistich_with_gabc = accent_2(hemistich_with_gabc[:hemistich_with_gabc.index(syllable) + 1], None, None, None, flex_1, flex_2, flex_2, True, False, 1) + hemistich_with_gabc[hemistich_with_gabc.index(syllable) + 1:] #Flexas só tem 1 acento
             # Tenor
             for syllable in hemistich_with_gabc:
                 if '(' not in syllable:
@@ -83,6 +84,7 @@ def psalm_generator(psalm, clef, int_1, int_2, ten, flex_1, flex_2, pre_med_1, p
 
     psalm_gabc = f"""
 name: psalm;
+initial-style: 0;
 user-notes: ;
 commentary: ;
 annotation: ;
@@ -94,9 +96,13 @@ centering-scheme: english;
 %height: 11;
 %%
 {clef} """
-
+    versicle_index = 2
     for hemistich in hemistichs_with_gabc:
         for syllable in hemistich:
+            if (hemistichs_with_gabc.index(hemistich) % 4 == 0 and hemistichs_with_gabc.index(hemistich) != 0
+                    and hemistich.index(syllable) == 0):
+                syllable = f'{versicle_index}. ' + syllable
+                versicle_index += 1
             if '-' in syllable:
                 syllable = syllable.replace("-", "", 1)
             else:
@@ -105,8 +111,13 @@ centering-scheme: english;
                 syllable = syllable.replace("[", "", 1)
                 syllable = syllable.replace("]", "", 1)
             psalm_gabc += syllable
-        psalm_gabc += ('(:)')
-    #print(psalm_gabc)
+        if hemistichs_with_gabc.index(hemistich) % 2 != 0:
+            psalm_gabc += ('(::)')
+        elif hemistichs_with_gabc.index(hemistich) % 2 == 0:
+            psalm_gabc += ('(:)')
+        if (hemistichs_with_gabc.index(hemistich) + 1) % 4 == 0:
+            psalm_gabc += ('(Z)')
+    print(psalm_gabc)
     return psalm_gabc
 
 # if __name__ == '__main__':

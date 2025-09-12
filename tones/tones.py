@@ -44,10 +44,10 @@ def select_tone(selected_tone):
                  'tone_3g2': ['(c4)', '(g)', '(hj)', '(j)', '(j)', '(h)', None, None, '(k)', '(j)', '(j)', 1, '(ih)', '(j)', '(j)', 2,
                '(h)', '(j)', '(i)', None, None, None, None, '(h)', '(g)', '(gh)', 1],
 
-                 'tone_4': ['(c4)', '(h)', '(gh)', '(h)', '(g)', '(g)', '(g)', '(h)', None, None, None, 1, '(i)', '(h)', '(h)', 1,
+                 'tone_4': ['(c4)', '(h)', '(gh)', '(h)', '(h)', '(g)', '(g)', '(h)', None, None, None, 1, '(i)', '(h)', '(h)', 1,
                None, None, None, None, None, None, None, '(h)', '(g)', '(g)', 1],
 
-                 'tone_4e': ['(c4)', '(h)', '(gh)', '(h)', '(g)', '(g)', '(g)', '(h)', None, None, None, 1, '(i)', '(h)', '(h)', 1,
+                 'tone_4e': ['(c4)', '(h)', '(gh)', '(h)', '(h)', '(g)', '(g)', '(h)', None, None, None, 1, '(i)', '(h)', '(h)', 1,
                '(g)', '(h)', '(ih)', None, None, None, None, '(gf)', '(g)', '(e)', 2],
 
                  'tone_4alt_c': ['(c3)', '(i)', '(hi)', '(i)', '(i)', '(h)', '(h)', '(g)', None, None, None, 1, '(j)', '(i)', '(i)', 1,
@@ -71,19 +71,19 @@ def select_tone(selected_tone):
                  'tone_6alt': ['(c4)', '(f)', '(gh)', '(h)', '(h)', '(g)', None, '(g)', None, None, None, None, '(h)', '(f)', '(f)', 1,
                None, '(f)', '(gh)', None, None, None, None, '(g)', '(f)', '(f)', 1],
 
-                 'tone_7a': ['(c3)', '(hg)', '(hi)', '(i)', '(h)', '(h)', None, None, '(k)', '(j)', '(j)', 1, '(i)', '(j)', '(j)', 1,
+                 'tone_7a': ['(c3)', '(hg)', '(hi)', '(i)', '(i)', '(h)', None, None, '(k)', '(j)', '(j)', 1, '(i)', '(j)', '(j)', 1,
                None, None, None, '(j)', '(i)', '(i)', 1, '(h)', '(h)', '(gf)', 1],
 
-                 'tone_7b': ['(c3)', '(hg)', '(hi)', '(i)', '(h)', '(h)', None, None, '(k)', '(j)', '(j)', 1, '(i)', '(j)', '(j)', 1,
+                 'tone_7b': ['(c3)', '(hg)', '(hi)', '(i)', '(i)', '(h)', None, None, '(k)', '(j)', '(j)', 1, '(i)', '(j)', '(j)', 1,
                None, None, None, '(j)', '(i)', '(i)', 1, '(h)', '(h)', '(g)', 1],
 
-                 'tone_7c': ['(c3)', '(hg)', '(hi)', '(i)', '(h)', '(h)', None, None, '(k)', '(j)', '(j)', 1, '(i)', '(j)', '(j)', 1,
+                 'tone_7c': ['(c3)', '(hg)', '(hi)', '(i)', '(i)', '(h)', None, None, '(k)', '(j)', '(j)', 1, '(i)', '(j)', '(j)', 1,
                None, None, None, '(j)', '(i)', '(i)', 1, '(h)', '(h)', '(gh)', 1],
 
-                 'tone_7c2': ['(c3)', '(hg)', '(hi)', '(i)', '(h)', '(h)', None, None, '(k)', '(j)', '(j)', 1, '(i)', '(j)', '(j)', 1,
+                 'tone_7c2': ['(c3)', '(hg)', '(hi)', '(i)', '(i)', '(h)', None, None, '(k)', '(j)', '(j)', 1, '(i)', '(j)', '(j)', 1,
                None, None, None, '(j)', '(i)', '(i)', 1, '(h)', '(h)', '(ih)', 1],
 
-                 'tone_7d': ['(c3)', '(hg)', '(hi)', '(i)', '(h)', '(h)', None, None, '(k)', '(j)', '(j)', 1, '(i)', '(j)', '(j)', 1,
+                 'tone_7d': ['(c3)', '(hg)', '(hi)', '(i)', '(i)', '(h)', None, None, '(k)', '(j)', '(j)', 1, '(i)', '(j)', '(j)', 1,
                None, None, None, '(j)', '(i)', '(i)', 1, '(h)', '(h)', '(gi)', 1],
 
                  'tone_8g': ['(c4)', '(g)', '(h)', '(j)', '(j)', '(h)', None, None, None, None, None, None, '(k)', '(j)', '(j)', 1,
