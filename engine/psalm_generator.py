@@ -117,8 +117,9 @@ centering-scheme: english;
             psalm_gabc += ('(:)')
         if (hemistichs_with_gabc.index(hemistich) + 1) % 4 == 0:
             psalm_gabc += ('(Z)')
-    print(psalm_gabc)
+    #print(psalm_gabc)
     return psalm_gabc
 
 # if __name__ == '__main__':
+
 #     compiler(psalm_generator(*mode_pasc), 'psalm_4_pascal')
